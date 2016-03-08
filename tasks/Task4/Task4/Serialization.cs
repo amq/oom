@@ -29,12 +29,10 @@ namespace Task4
             File.WriteAllText(filename, text);
 
             // 5. deserialize items from "items.json"
-            // ... and print Description and Price of deserialized items
-            /*
+            // ... and print Clouds of deserialized items
             var textFromFile = File.ReadAllText(filename);
             var itemsFromFile = JsonConvert.DeserializeObject<IWeather[]>(textFromFile, settings);
-            foreach (var x in itemsFromFile) Console.WriteLine($"{x.Clouds} ");
-            */
+            foreach (var x in itemsFromFile) Console.WriteLine($"{x.Clouds}");
         }
     }
 }

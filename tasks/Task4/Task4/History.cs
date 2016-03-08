@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace Task4
         /// <param name="city">City must not be empty.</param>
         /// <param name="clouds">The state of clouds.</param>
         /// <param name="temperature">Temperature.</param>
+        [JsonConstructor]
         public History(string country, string city, DateTime date, string clouds, Temperature temperature)
         {
             if (string.IsNullOrWhiteSpace(country)) throw new ArgumentException("Country must not be empty.", nameof(country));
